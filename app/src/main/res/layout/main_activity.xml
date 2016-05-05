@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ToggleButton
+        android:id="@+id/server_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textOn="@string/stop_server"
+        android:textOff="@string/start_server"
+        />
+    <TextView
+        android:id="@+id/server_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>
