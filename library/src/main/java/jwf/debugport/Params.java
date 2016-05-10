@@ -7,20 +7,55 @@ import android.os.Parcelable;
  * Configuration parameters for the {@link DebugPortService}
  */
 public class Params implements Parcelable {
+    public static final int DEFAULT_ANDROID_PORT = 8562;
+    public static final int DEFAULT_SQLITE_PORT = 8563;
+
     public Params() {
     }
 
     /**
      * Set the port on which the {@link jwf.debugport.internal.TelnetServer} should be made available.
+     * @deprecated Use {@link #setDebugPort(int)} instead.
      */
+    @Deprecated
     public Params setPort(int port) {
         return this;
     }
 
     /**
      * Get the port on which the {@link jwf.debugport.internal.TelnetServer} will be made available.
+     * @deprecated Use {@link #getDebugPort()} instead.
      */
+    @Deprecated
     public int getPort() {
+        return 0;
+    }
+
+    /**
+     * Set the port on which the debug port server will be made available.
+     */
+    public Params setDebugPort(int port) {
+        return this;
+    }
+
+    /**
+     * Get the port on which the debug port server will be made available.
+     */
+    public int getDebugPort() {
+        return 0;
+    }
+
+    /**
+     * Set the port on which the SQLite-context server will be made available.
+     */
+    public Params setSQLitePort(int port) {
+        return this;
+    }
+
+    /**
+     * Get the port on which the SQLite-context server will be made available.
+     */
+    public int getSQLitePort() {
         return 0;
     }
 
